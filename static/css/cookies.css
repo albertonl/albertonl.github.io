@@ -1,15 +1,11 @@
-#cookieconsent {
+#cookieConsent {
     background-color: rgba(20,20,20,0.8);
     min-height: 26px;
     font-size: 14px;
     color: #ccc;
     line-height: 26px;
     padding: 8px 0 8px 30px;
-    font-family: "Trebuchet MS",Helvetica,sans-serif;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+
     display: none;
     z-index: 9999;
 }
@@ -41,4 +37,14 @@
 }
 #cookieConsent a.cookieConsentOK:hover {
     background-color: #E0C91F;
+}
+
+
+
+#cookieconsent {
+  font-family: "Poppins",Helvetica,sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
