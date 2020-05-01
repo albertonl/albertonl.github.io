@@ -207,8 +207,13 @@ h1 {
   padding-top: 10px;
   padding-bottom: 10px; }
 
-h2 {
+h2:not(.skill-title) {
   font-size: 36px !important;
+  font-weight: bold !important;
+  padding-bottom: 20px; }
+
+.skill-title {
+  font-size: 28px !important;
   font-weight: bold !important;
   padding-bottom: 20px; }
 
