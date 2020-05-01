@@ -1,0 +1,21 @@
+# English
+/		/views/index.html
+/en		/views/index.html
+/projects	/views/projects.html
+/en/projects	/views/projects.html
+/contact	/views/contact.html
+/en/contact	/views/contact.html
+
+# Spanish
+/es		/views/index.es.html
+/es/projects	/views/projects.es.html
+/es/proyectos	/views/projects.es.html
+/es/contact	/views/contact.es.html
+/es/contacto	/views/contact.es.html
+
+# Catalan
+/ca		/views/index.ca.html
+/ca/projects	/views/projects.ca.html
+/ca/projectes	/views/projects.ca.html
+/ca/contact	/views/contact.ca.html
+/ca/contacte	/views/contact.ca.html	

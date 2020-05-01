@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <title>Projectes | albertonl</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../static/img/favicon.png">
+
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="../static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/cubing-icons.css">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> <!-- Poppins font -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Bootstrap JS, Popper.js, jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome icons -->
+    <script src="https://kit.fontawesome.com/4e86282235.js" crossorigin="anonymous"></script>
+    <!-- Devicon -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+
+    <style type="text/css">
+      @media only screen and (min-width: 550px) {
+        .jumbotron {
+          background-image: url("../static/img/about/google-office-top.jpg");
+          height: 500px;
+          margin-bottom: none;
+          margin-top: 0px;
+        }
+      }
+      @media only screen and (max-width: 549px) {
+        .jumbotron {
+          background-image: url("../static/img/about/google-office-top-sm.jpg");
+          height: 400px;
+          margin-bottom: none;
+          margin-top: 0px;
+        }
+      }
+    </style>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160715131-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160715131-2');
+    </script>
+  </head>
+  <body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="https://albertonl.com">
+        <img src="../static/img/logo.png" height="70" alt="Website logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/ca">Inici</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/ca/projectes">Projectes <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item disabled">
+            <a class="nav-link" href="/ca/projectes" onclick="alert('I\'m sorry, but my blog is not ready... just yet.')">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ca/contacte">Contacte</a>
+          </li>
+          <li class="nav-item dropdown small-only">
+            <a class="dropdown-toggle" href="#" id="langDropdownSm" role="button" data-toggle="modal" data-target="#langSelectSm" aria-haspopup="true" aria-expanded="false" style="color: rgba(255,255,255,.5); text-decoration: none;">
+              <img class="flag" src="../static/img/flags-svg/andorra.svg">
+            </a>
+            <div class="modal fade" id="langSelectSm" tabindex="-1" role="dialog" aria-labelledby="langSelectTitleSm" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="langSelectTitleSm">Triar idioma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <img class="flag" src="../static/img/flags-svg/united-states-of-america.svg">&nbsp;&nbsp;
+                      <a href="/projects">English</a>
+                    </p>
+                    <p>
+                      <img class="flag" src="../static/img/flags-svg/spain.svg">&nbsp;&nbsp;
+                      <a href="/es/proyectos">Español</a>
+                    </p>
+                    <p>
+                      <img class="flag" src="../static/img/flags-svg/latvia.svg">&nbsp;&nbsp;
+                      Latviešu valoda <span style="font-size: 15px;">(pròximament)</span>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel·la</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--
+            <div class="dropdown-menu" aria-labelledby="langDropdown">
+              <a class="dropdown-item" href="/es">
+                <img class="flag-lang" src="../static/img/flags-svg/spain.svg">&nbsp;Español
+              </a>
+              <a class="dropdown-item" href="/ca">
+                <img class="flag-lang" src="../static/img/flags-svg/andorra.svg">&nbsp;Català
+              </a>
+            </div>
+          -->
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown ml-auto big-only">
+            <a class="dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="modal" data-target="#langSelect" aria-haspopup="true" aria-expanded="false" style="color: rgba(255,255,255,.5); text-decoration: none;">
+              <img class="flag" src="../static/img/flags-svg/andorra.svg">
+            </a>
+            <div class="modal fade" id="langSelect" tabindex="-1" role="dialog" aria-labelledby="langSelectTitle" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="langSelectTitle">Triar idioma</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      <img class="flag" src="../static/img/flags-svg/united-states-of-america.svg">&nbsp;&nbsp;
+                      <a href="/projects">English</a>
+                    </p>
+                    <p>
+                      <img class="flag" src="../static/img/flags-svg/svg.svg">&nbsp;&nbsp;
+                      <a href="/es/proyectos">Español</a>
+                    </p>
+                    <p>
+                      <img class="flag" src="../static/img/flags-svg/latvia.svg">&nbsp;&nbsp;
+                      Latviešu valoda <span style="font-size: 15px;">(pròximament)</span>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel·la</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--
+            <div class="dropdown-menu" aria-labelledby="langDropdown">
+              <a class="dropdown-item" href="/es">
+                <img class="flag-lang" src="../static/img/flags-svg/spain.svg">&nbsp;Español
+              </a>
+              <a class="dropdown-item" href="/ca">
+                <img class="flag-lang" src="../static/img/flags-svg/andorra.svg">&nbsp;Català
+              </a>
+            </div>
+          -->
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content row">
+      <div class="col-12">
+        <div class="jumbotron jumbotron-fluid text-profile">
+          <div class="content jumbotron-huge">
+            <h1 class="display-4 jumbotron-text-dark"><span class="big-only">Els meus p</span><span class="small-only">P</span>rojectes</h1>
+            <p class="lead jumbotron-text-dark">Ara pots bé seguir baixant<br>o també espiar-me a GitHub.</p>
+            <a class="btn btn-primary btn-lg" href="https://github.com/albertonl">Anar a GitHub »</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-12 profile-text-jumbotron-above">
+        <div class="achievements done-projects">
+          <h2><u>Projectes acabats</u>&nbsp;&nbsp;<i class="fas fa-clipboard-check"></i></h2>
+          <div class="achievement-item-left">
+            <div class="card card-project">
+              <a href="https://github.com/albertonl/jeff">
+                <img class="card-img-top" src="../static/img/projects/jeff.png">
+              </a>
+              <div class="card-body project-desc">
+                <div class="card-title achievement-title">Jeffrey
+                  <span class="big-only">&nbsp;&nbsp;</span>
+                  <span class="small-only"><br></span>
+                  <a class="blacklink" href="https://github.com/albertonl/jeff"><i class="fab fa-github"></i></a>&nbsp;&nbsp;
+                  <a class="blacklink" href="https://https//t.me/ImGonnaBeYourWorstNightmareBot"><i class="fab fa-telegram"></i></a>
+                </div><br>
+                <span class="card-text achievement-desc">Jeff es un bot que, bé, fa... coses extranyes.</span>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-item-left">
+            <div class="card card-project">
+              <a href="https://github.com/albertonl/lletrejador">
+                <img class="card-img-top" src="../static/img/projects/lletrejador.png">
+              </a>
+              <div class="card-body project-desc">
+                <div class="card-title achievement-title">Lletrejador <span style="color: red; font-size: 15px;">(alerta cringe)</span>
+                  <span class="big-only">&nbsp;&nbsp;</span>
+                  <span class="small-only"><br></span>
+                  <a class="blacklink" href="https://github.com/albertonl/lletrejador"><i class="fab fa-github"></i></a>
+                </div><br>
+                <span class="card-text achievement-desc">Lletrajador amb indicadors de pronunciació per a paraules en català. Amb l'ajuda del mòdul lingüístic <a href="https://github.com/apertium/apertium-cat">apertium-cat</a>.</span>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-item-left">
+            <div class="card card-project">
+              <a href="https://github.com/albertonl/babyshark">
+                <img class="card-img-top" src="../static/img/projects/babyshark.png">
+              </a>
+              <div class="card-body project-desc">
+                <div class="card-title achievement-title">Baby Shark <span style="color: red; font-size: 15px;">(alerta cringe)</span>
+                  <span class="big-only">&nbsp;&nbsp;</span>
+                  <span class="small-only"><br></span>
+                  <a class="blacklink" href="https://github.com/albertonl/babyshark"><i class="fab fa-github"></i></a>
+                </div><br>
+                <span class="card-text achievement-desc">Baby shark doo doo doo doo doo doo,<br>
+                  Baby shark doo doo doo doo doo doo...
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-item-left">
+            <div class="card card-project">
+              <a href="https://adoring-banach-d78e0a.netlify.app">
+                <img class="card-img-top" src="../static/img/projects/acw.png">
+              </a>
+              <div class="card-body project-desc">
+                <div class="card-title achievement-title">Alberto's Cubing World
+                  <span class="big-only">&nbsp;&nbsp;</span>
+                  <span class="small-only"><br></span>
+                  <a class="blacklink" href="https://adoring-banach-d78e0a.netlify.app" data-toggle="tooltip" data-placement="bottom" title="I forgot you could have custom domains on Netlify..."><i class="fas fa-globe"></i></a>
+                </div>
+                <span class="card-text achievement-desc">El millor lloc per a rebre una introducció al món dels cubs de Rubik, en adició a informació també molt interesant. Part dels projectes del curs <a href="https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript">CS50 Web Programming with Python and JavaScript</a>.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="clearfix w-100 d-md-none pb-3">
+      <div class="col-lg-6 col-sm-12 profile-text-jumbotron-above">
+        <div class="achievements undone-projects">
+          <h2><u>Projectes inacabats</u>&nbsp;&nbsp;<i class="fas fa-tasks"></i></h2>
+          <div class="achievement-item project-right">
+            <div class="card card-project">
+              <a href="https://github.com/albpl">
+                <img class="card-img-top" src="../static/img/projects/alb.png">
+              </a>
+              <div class="card-body project-desc">
+                <div class="card-title achievement-title">ALB Programming Language
+                  <span class="big-only">&nbsp;&nbsp;</span>
+                  <span class="small-only"><br></span>
+                  <a class="blacklink" href="https://github.com/albpl"><i class="fab fa-github"></i></a>&nbsp;&nbsp;
+                  <a class="blacklink" href="https://albpl.blogspot.com"><i class="fas fa-globe"></i></a>
+                </div>
+                <span class="card-text achievement-desc">Un llenguatge de programació senzill però poderós, perfecte per a tots.</span>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-item project-right">
+            <div class="card card-project">
+              <a href="https://github.com/albertonl/alb-as">
+                <img class="card-img-top" src="../static/img/projects/alb-as.jpg">
+              </a>
+              <div class="card-body project-desc">
+                <div class="card-title achievement-title">ALB AulesScraper
+                  <span class="big-only">&nbsp;&nbsp;</span>
+                  <span class="small-only"><br></span>
+                  <a class="blacklink" href="https://github.com/alb-as"><i class="fab fa-github"></i></a>
+                </div>
+                <span class="card-text achievement-desc">Un web scraper e emailer per a <a href="https://aules.edu.gva.es">Aules</a>. Et deixarà actualitzacions als teus cursos i tasques directament a la teua safata d'entrada. Aquest projecte és <b>completament independent</b>.</span>
+              </div>
+            </div>
+          </div>
+          <div class="achievement-item project-right">
+            <div class="card card-project">
+              <div data-toggle="tooltip" data-placement="bottom" title="Ho sentim, però aquest projecte no està disponible :(">
+                <img class="card-img-top" src="../static/img/projects/speed-math.jpg">
+              </div>
+              <div class="card-body project-desc">
+                <div class="card-title achievement-title">Speed Math
+                  <span class="big-only">&nbsp;&nbsp;</span>
+                  <span class="small-only"><br></span>
+                  <span style="color: red; font-size: 15px;">(no disponible)</span>
+                </div>
+                <span class="card-text achievement-desc">Speed Math és un joc per entrenar el teu cervell des de qualsevol lloc (també des d'el sofà!). Pots jugar des de qualsevol dispositiu amb Google Assistant incorporat.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-4 body-reg">
+      <div class="container-fluid text-center text-md-left">
+        <div class="row">
+          <div class="col-md-6 mt-md-0 mt-3">
+            <img src="../static/img/logo.png" height="60" alt="Website logo">
+            <hr>
+            <div class="acknowledgements">
+              <ul class="list-unstyled">
+                <li>Icones de banderes per <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a>, a <a href="https://www.flaticon.es/" title="Flaticon">flaticon.es</a></li>
+                <li>La resta de fotos són meues ;)</li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="clearfix w-100 d-md-none pb-3">
+
+          <div class="col-md-3 mb-md-3 mb-3">
+            <h5 class="text-uppercase">Xarxes socials</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <i class="fab fa-youtube"></i>&nbsp;<a href="https://www.youtube.com/channel/UCryV5MrUXVbCXenANPN-TRQ">YouTube</a>
+              </li>
+              <li>
+                <i class="fab fa-instagram"></i>&nbsp;<a href="https://instagram.com/albertonl_">Instagram</a>
+              </li>
+              <li>
+                <i class="fab fa-twitter"></i>&nbsp;<a href="https://twitter.com/albertonldev">Twitter</a>
+              </li>
+              <li>
+                <i class="fab fa-reddit"></i>&nbsp;<a href="https://reddit.com/u/albertonl">Reddit</a>
+              </li>
+              <li>
+                <i class="fab fa-github"></i>&nbsp;<a href="https://github.com/albertonl">GitHub</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>&nbsp;<a href="mailto:alberto@albertonl.com">Envia'm un correu!</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 mb-md-0 mb-3">
+            <h5 class="text-uppercase">Altres enllaços</h5>
+
+            <ul class="list-unstyled">
+              <li><a href="/projects" onclick="alert('I\'m sorry, but my blog is not ready... just yet.')">El meu blog!</a></li>
+              <li><a href="https://medium.com/@alberto.navalonlillo">Espia'm a Medium</a></li>
+              <li><a href="https://www.worldcubeassociation.org/persons/2018LILL04">Perfil WCA</a></li>
+              <li><a href="https://ratings.fide.com/profile/54561035">Perfil FIDE</a></li>
+              <li><a href="https://codein.withgoogle.com">Google Code-In</a></li>
+              <li><a href="https://apertium.org">Apertium</a></li>
+            </ul>
+          </div>
+          <div class="col-12 footer-copyright" align="center">
+            <i class="far fa-copyright"></i>&nbsp;2020 Copyright:&nbsp;
+            <a href="https://albertonl.com">albertonl.com</a><br>
+            Fet amb <i class="fas fa-heart"></i>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
