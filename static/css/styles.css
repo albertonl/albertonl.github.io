@@ -213,9 +213,12 @@ h2:not(.skill-title) {
   padding-bottom: 20px; }
 
 .skill-title {
-  font-size: 28px !important;
+  font-size: 26px !important;
   font-weight: bold !important;
   padding-bottom: 20px; }
+
+.jumbotron-email {
+  font-size: 36px !important; }
 
 .profile-text-contents > p {
   padding-top: 10px; }
