@@ -38,6 +38,8 @@
       }
     </style>
 
+    <!-- Cookie consent -->
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160715131-2"></script>
     <script>
@@ -48,7 +50,7 @@
       gtag('config', 'UA-160715131-2');
     </script>
   </head>
-  <body>
+  <body onload="loadCookieConsent();">
     <!-- Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-brand" href="https://albertonl.com">
@@ -463,9 +465,7 @@
       </div>
     </div>
 
-    <div id="cookieConsent">
-      <div id="closeCookieConsent">&times;</div>
-      This website is using cookies. <a href="/cookies/" target="_blank">More info</a>. <a class="cookieConsentOK">OK</a>
+    <div id="cookieconsent">
     </div>
 
     <hr>
@@ -532,16 +532,34 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      $(document).ready(function(){
-        setTimeout(function () {
-          $("#cookieConsent").fadeIn(200);
-        }, 4000);
-        $("#closeCookieConsent, .cookieConsentOK").click(function() {
-          $("#cookieConsent").fadeOut(200);
+    <script type="text/javascript">
+      function loadCookieConsent() {
+        window.cookieconsent.initialise({
+          container: document.getElementById("cookieconsent"),
+          palette: {
+            popup: { background: "#1aa3ff" },
+            button: { background: "#e0e0e0" },
+          },
+          revokable: true,
+          onStatusChange: function(status) {
+            console.log(this.hasConsented() ?
+            'enable cookies' : 'disable cookies');
+          },
+          "theme": "edgeless",
+          "content": {
+            "header": 'Uso de cookies',
+            "message": 'Esta página utiliza cookies para mejorar su experiencia.',
+            "dismiss": 'Entendido',
+            "allow": 'Permitir cookies',
+            "deny": 'Denegar uso de cookies',
+            "link": 'Más información',
+            "href": '/cookies',
+            "close": '&#x274c;',
+            "policy": 'Política de cookies',
+            "target": '_blank',
+          }
         });
-      });
+      }
     </script>
   </body>
 </html>
