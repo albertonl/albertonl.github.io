@@ -12,7 +12,6 @@
     <!-- Custom stylesheets -->
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/cookies.css">
     <link rel="stylesheet" type="text/css" href="/static/css/cubing-icons.css">
 
     <!-- Fonts -->
@@ -39,7 +38,7 @@
     </style>
 
     <!-- Cookie consent -->
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"corners":"normal","colors":{"popup":{"background":"#222222","text":"#ffffff","border":"#b3d0e4"},"button":{"background":"#b3d0e4","text":"#000000"}},"position":"bottom-right","transparency":"5","fontsize":"large","content":{"href":"https://albertonl.com/cookies","message":"Aquesta pàgina fa ús de cookies per assegurar la millor experiència.","link":"Més informació","button":"Entés"}})});</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160715131-2"></script>
     <script>
@@ -465,9 +464,6 @@
       </div>
     </div>
 
-    <div id="cookieconsent">
-    </div>
-
     <hr>
 
     <!-- Footer -->
@@ -532,35 +528,5 @@
         </div>
       </div>
     </footer>
-
-    <script type="text/javascript">
-      function loadCookieConsent() {
-        window.cookieconsent.initialise({
-          container: document.getElementById("cookieconsent"),
-          palette: {
-            popup: { background: "#1aa3ff" },
-            button: { background: "#e0e0e0" },
-          },
-          revokable: true,
-          onStatusChange: function(status) {
-            console.log(this.hasConsented() ?
-            'enable cookies' : 'disable cookies');
-          },
-          "theme": "edgeless",
-          "content": {
-            "header": 'Ús de cookies',
-            "message": 'Aquesta pàgina fa ús de cookies per a millorar la seua experiència.',
-            "dismiss": 'Entés',
-            "allow": 'Permtre cookies',
-            "deny": 'No permetre ús de cookies',
-            "link": 'Més informació',
-            "href": '/cookies',
-            "close": '&#x274c;',
-            "policy": 'Política de cookies',
-            "target": '_blank',
-          }
-        });
-      }
-    </script>
   </body>
 </html>
