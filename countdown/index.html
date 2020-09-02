@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<title>It's coming.</title>
+		
+		<link rel="icon" href="../static/img/favicon.png">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+			html, body {
+				font-family: 'Major Mono Display', monospace;
+				padding: 0!important;
+				margin: 0!important;
+			}
+			#wrapper {
+				background-color: #eee;
+				color: #454545;
+				min-height: 100vh;
+			}
+			#outerwrapper {
+				background-color: #454545;
+				color: #eee;
+				min-height: 100vh;
+			}
+			.innerwrapper {
+				margin-left: 3.5%;
+				height: 500px;
+				display: flex;
+				flex-direction: column;
+			}
+			h1 {
+				padding-top: 25vh;
+			}
+			#countdown, #fridaycountdown {
+				display: block;
+				font-size: 2em;
+				margin-block-start: 0.67em;
+				margin-block-end: 0.67em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+			}
+			@media only screen and (min-width: 768px;) {
+				#wrapper {
+					margin-left: 10%;
+				}
+			}
+			
+			/* Floating button */
+			.float{
+				position:fixed;
+				width:60px;
+				height:60px;
+				bottom:40px;
+				right:40px;
+				background-color:#9FC2CC;
+				color:#FFF;
+				border-radius:50px;
+				text-align:center;
+				box-shadow: 2px 2px 3px #999;
+			}
+			.float img {
+				padding-top: 5px;
+				padding-left: 2px;
+			}
+		</style>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160715131-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-160715131-2');
+    </script>
+	</head>
+	<body>
+		<main>
+			<div id="wrapper">
+				<div class="innerwrapper">
+					<h1 id="text">We must wait.</h1>
+					<div id="countdown"></div>
+				</div>
+			</div>
+			<div id="outerwrapper">
+				<div class="innerwrapper">
+					<h1 id="friday">Friday is coming.</h1>
+					<div id="fridaycountdown"></div>
+				</div>
+			</div>
+		</main>
+		
+		<a href="/" class="float">
+			<img src="../static/img/favicon.png" height="50" width="50">
+		</a>
+		
+		<script>
+		CountDownTimer('2021-06-18T13:50:00', 'countdown', 'text');
+		CountDownTimer('2020-09-04T00:00:00', 'fridaycountdown', 'friday');
+		
+		function CountDownTimer (dt, id, t) {
+			var end = new Date(dt);
+
+		  var _second = 1000;
+		  var _minute = _second * 60;
+		  var _hour = _minute * 60;
+		  var _day = _hour * 24;
+		  var timer;
+
+		  function showRemaining() {
+		      var now = new Date();
+		      var distance = end - now;
+		      if (distance < 0) {
+		          document.getElementById(id).innerHTML = '0d 0h<br>0m 0s';
+		          document.getElementById(t).innerHTML = t !== 'friday' ? 'You did it.' : 'Friday is here.';ç
+		          
+		          if (t === 'friday') {
+		          	let d = new Date();
+		          	if (d.getDay() < 5 && d.getDay() > 0) {
+		          		let dayNum = d.getDay();
+		          		let daysToFri = 5 - (dayNum < 5 ? dayNum : dayNum - 7);
+		          		
+		          		// Get milliseconds to midnight Friday
+		          		var fridayNight = new Date(+d);
+		          		end.setDate(fridayNight.getDate() + daysToFri);
+		          		end.setHours(0,0,0,0);
+		          	} else if (d.getDay() === 6 || d.getDay() === 0) {
+		          		document.getElementById(t).innerHTML = 'No need to worry yet.';
+		          	}
+		          } else {
+		          	clearInterval(timer);
+		          }
+
+		          return;
+		      }
+		      
+		      var days = Math.floor(distance / _day);
+		      var hours = Math.floor((distance % _day) / _hour);
+		      var minutes = Math.floor((distance % _hour) / _minute);
+		      var seconds = Math.floor((distance % _minute) / _second);
+		      
+		      if (t !== 'friday') {
+				    if (days <= 200 && days > 125) document.getElementById(t).innerHTML = 'Keep going.';
+				    else if (days <= 125 && days > 50) document.getElementById(t).innerHTML = 'Don\'t lose hope.';
+				    else if (days <= 50) document.getElementById(t).innerHTML = 'You\'re almost there.'
+				  }
+		      
+		      document.getElementById(id).innerHTML = `${String(days).padStart(2, '0')}d ${String(hours).padStart(2, '0')}h<br>${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
+		  }
+
+		  timer = setInterval(showRemaining, 1000);
+		 }
+		</script>
+	</body>
+</html>
+		
+				
