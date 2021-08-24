@@ -99,8 +99,12 @@
 		</a>
 
 		<script>
+		var _friday = new Date();
+		_friday.setDate(_friday.getDate() + 5 - (_friday.getDay() < 5 ? _friday.getDay() : _friday.getDay() - 7));
+		console.log(_friday.toISOString())
+
 		CountDownTimer('2022-06-17T13:50:00', 'countdown', 'text');
-		CountDownTimer('2021-09-03T00:00:00', 'fridaycountdown', 'friday');
+		CountDownTimer(_friday.toISOString(), 'fridaycountdown', 'friday');
 
 		function CountDownTimer (dt, id, t) {
 			var end = new Date(dt);
