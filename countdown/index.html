@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		
+
 		<title>It's coming.</title>
-		
+
 		<link rel="icon" href="../static/img/favicon.png">
 
 		<style>
@@ -48,7 +48,7 @@
 					margin-left: 10%;
 				}
 			}
-			
+
 			/* Floating button */
 			.float{
 				position:fixed;
@@ -67,7 +67,7 @@
 				padding-left: 2px;
 			}
 		</style>
-		
+
 		<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160715131-2"></script>
     <script>
@@ -93,15 +93,15 @@
 				</div>
 			</div>
 		</main>
-		
+
 		<a href="/" class="float">
 			<img src="../static/img/favicon.png" height="50" width="50">
 		</a>
-		
+
 		<script>
-		CountDownTimer('2021-06-18T13:50:00', 'countdown', 'text');
-		CountDownTimer('2020-09-04T00:00:00', 'fridaycountdown', 'friday');
-		
+		CountDownTimer('2022-06-17T13:50:00', 'countdown', 'text');
+		CountDownTimer('2021-09-03T00:00:00', 'fridaycountdown', 'friday');
+
 		function CountDownTimer (dt, id, t) {
 			var end = new Date(dt);
 
@@ -117,13 +117,13 @@
 		      if (distance < 0) {
 		          document.getElementById(id).innerHTML = '0d 0h<br>0m 0s';
 		          document.getElementById(t).innerHTML = t !== 'friday' ? 'You did it.' : 'Friday is here.';
-		          
+
 		          if (t === 'friday') {
 		          	let d = new Date();
 		          	if (d.getDay() < 5 && d.getDay() > 0) {
 		          		let dayNum = d.getDay();
 		          		let daysToFri = 5 - (dayNum < 5 ? dayNum : dayNum - 7);
-		          		
+
 		          		// Get milliseconds to midnight Friday
 		          		var fridayNight = new Date(+d);
 		          		end.setDate(fridayNight.getDate() + daysToFri);
@@ -137,18 +137,18 @@
 
 		          return;
 		      }
-		      
+
 		      var days = Math.floor(distance / _day);
 		      var hours = Math.floor((distance % _day) / _hour);
 		      var minutes = Math.floor((distance % _hour) / _minute);
 		      var seconds = Math.floor((distance % _minute) / _second);
-		      
+
 		      if (t !== 'friday') {
 				    if (days <= 200 && days > 125) document.getElementById(t).innerHTML = 'Keep going.';
 				    else if (days <= 125 && days > 50) document.getElementById(t).innerHTML = 'Don\'t lose hope.';
 				    else if (days <= 50) document.getElementById(t).innerHTML = 'You\'re almost there.'
 				  }
-		      
+
 		      document.getElementById(id).innerHTML = `${String(days).padStart(2, '0')}d ${String(hours).padStart(2, '0')}h<br>${String(minutes).padStart(2, '0')}m ${String(seconds).padStart(2, '0')}s`;
 		  }
 
@@ -157,5 +157,3 @@
 		</script>
 	</body>
 </html>
-		
-				
