@@ -4,18 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="X-UA-Compatible" content="IE=edge">
-    <title>albertonl</title>
+    <title>Work In Progress — albertonl</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="/static/img/favicon.png">
-
-    <!-- Custom stylesheets -->
-    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/navbar.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/cubing-icons.css">
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"> <!-- Poppins font -->
+    <link rel="icon" href="favicon.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -30,14 +22,6 @@
     <!-- Devicon -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-    <style type="text/css">
-      .jumbotron {
-        background-size: cover;
-        background-image: url("/static/img/jumbotron-index.jpg");
-        margin-bottom: none;
-      }
-    </style>
-
     <!-- Cookie consent -->
     <link rel="stylesheet" type="text/css" href="//wpcc.io/lib/1.0.2/cookieconsent.min.css"/><script src="//wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"corners":"normal","colors":{"popup":{"background":"#222222","text":"#ffffff","border":"#b3d0e4"},"button":{"background":"#b3d0e4","text":"#000000"}},"position":"bottom-right","transparency":"5","fontsize":"large","content":{"href":"https://albertonl.com/cookies"}})});</script>
 
@@ -50,486 +34,54 @@
 
       gtag('config', 'UA-160715131-2');
     </script>
+
+    <style type="text/css">
+      html, body, .row {
+        min-height: 100%;
+        height: 100%;
+      }
+
+      .row div {
+        height: 100%;
+      }
+
+      .row div:first-of-type {
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 50px;
+        font-size: 18px;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      .row div:last-of-type {
+        position: relative;
+      }
+
+      .row div:last-of-type img {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    </style>
   </head>
   <body onload="loadCookieConsent();">
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="https://albertonl.com">
-        <img src="/static/img/logo.png" height="70" alt="Website logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/projects">Projects</a>
-          </li>
-          <li class="nav-item disabled">
-            <a class="nav-link" href="https://medium.com/@alberto.navalonlillo">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-          <li class="nav-item dropdown small-only">
-            <a class="dropdown-toggle" href="#" id="langDropdownSm" role="button" data-toggle="modal" data-target="#langSelectSm" aria-haspopup="true" aria-expanded="false" style="color: rgba(255,255,255,.5); text-decoration: none;">
-              <img class="flag" src="/static/img/flags-svg/united-states-of-america.svg">
-            </a>
-            <div class="modal fade" id="langSelectSm" tabindex="-1" role="dialog" aria-labelledby="langSelectTitleSm" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="langSelectTitleSm">Select language</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      <img class="flag" src="/static/img/flags-svg/spain.svg">&nbsp;&nbsp;
-                      <a href="/es/">Español</a>
-                    </p>
-                    <p>
-                      <img class="flag" src="/static/img/flags-svg/andorra.svg">&nbsp;&nbsp;
-                      <a href="/ca/">Català</a>
-                    </p>
-                    <p>
-                      <img class="flag" src="/static/img/flags-svg/latvia.svg">&nbsp;&nbsp;
-                      Latviešu valoda <br><span style="font-size: 15px;">(very soon!)</span>
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--
-            <div class="dropdown-menu" aria-labelledby="langDropdown">
-              <a class="dropdown-item" href="/es">
-                <img class="flag-lang" src="/static/img/flags-svg/spain.svg">&nbsp;Español
-              </a>
-              <a class="dropdown-item" href="/ca">
-                <img class="flag-lang" src="/static/img/flags-svg/andorra.svg">&nbsp;Català
-              </a>
-            </div>
-          -->
-          </li>
-        </ul>
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown ml-auto big-only">
-            <a class="dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="modal" data-target="#langSelect" aria-haspopup="true" aria-expanded="false" style="color: rgba(255,255,255,.5); text-decoration: none;">
-              <img class="flag" src="/static/img/flags-svg/united-states-of-america.svg">
-            </a>
-            <div class="modal fade" id="langSelect" tabindex="-1" role="dialog" aria-labelledby="langSelectTitle" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="langSelectTitle">Select language</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <p>
-                      <img class="flag" src="/static/img/flags-svg/spain.svg">&nbsp;&nbsp;
-                      <a href="/es/">Español</a>
-                    </p>
-                    <p>
-                      <img class="flag" src="/static/img/flags-svg/andorra.svg">&nbsp;&nbsp;
-                      <a href="/ca/">Català</a>
-                    </p>
-                    <p>
-                      <img class="flag" src="/static/img/flags-svg/latvia.svg">&nbsp;&nbsp;
-                      Latviešu valoda <br><span style="font-size: 15px;">(very soon!)</span>
-                    </p>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--
-            <div class="dropdown-menu" aria-labelledby="langDropdown">
-              <a class="dropdown-item" href="/es">
-                <img class="flag-lang" src="/static/img/flags-svg/spain.svg">&nbsp;Español
-              </a>
-              <a class="dropdown-item" href="/ca">
-                <img class="flag-lang" src="/static/img/flags-svg/andorra.svg">&nbsp;Català
-              </a>
-            </div>
-          -->
-          </li>
-        </ul>
+    <div class="row">
+      <div class="col-lg-6 col-sm-12">
+        <p>We are currently redesigning this website. It will be back available shortly.<br>We apologize for the inconvenience.</p>
+        <p>Actualmente estamos rediseñando esta página web. Estará disponible de nuevo en breve.<br>Disculpe las molestias.</p>
+        <p>Actualment estem redisenyant aquesta pàgina web. Estarà disponible novament en breu.<br>Disculpe les molèsties.</p>
+        <p>Pašlaik tiek pārveidota šī tīmekļa vietne. Drīzumā tā atkal būs pieejama.<br>Atvainojamies par sagādātajām neērtībām.</p>
+        <p>В настоящее время мы проводим редизайн этого сайта. Он будет снова доступен в ближайшее время.<br>Мы приносим извинения за причиненные неудобства.</p>
+        <p>Nous procédons actuellement à la refonte de ce site web. Il sera à nouveau disponible sous peu.<br>Nous vous prions de nous excuser pour les désagréments.</p>
+        <img src="logo.png" alt="albertonl logo" height="100" width="auto">
       </div>
-    </nav>
-
-    <div class="content row">
-      <div class="image-stack col-12">
-        <div class="column-left image-stack__item image-stack__item--bottom image-stack__item-left">
-          <img class="bg-pic" alt="Golden Gate Bridge, San Francisco, CA" src="/static/img/about/gg-bridge.jpg">
-        </div>
-        <div class="column-right image-stack__item image-stack__item--bottom image-stack__item-right">
-          <img class="bg-pic" alt="House of Blackheads, Riga, Latvia" src="/static/img/about/blackheads.jpg">
-        </div>
-        <div class="overlap image-stack__item image-stack__item--top">
-          <img class="profile-pic" alt="Personal photo" src="/static/img/about/profile.jpeg">
-        </div>
-      </div>
-      <div class="profile-text profile-text-header col-lg-6 col-sm-12">
-        <div class="profile-text-title">
-          <span class="pre-title text-blue">Hey there!</span><br>
-          <h1>This is me.</h1>
-        </div>
-        <div class="profile-text-contents">
-          <p>
-						Hi! My name is <b>Alberto Navalón Lillo</b>. I am a Spanish high school student (currently 14 years old) who loves coding and language learning. I started programming at age 7, when I took my first steps with Scratch, and since then, it has become one of my passions, along with doing Harvard MOOCs and chasing pigeons.<br>
-					</p>
-          <p>
-						Among my very (and I mean <b>VERY</b>) diverse interests, you can find <b>cubing</b>, <b>chess</b>, <b>reading</b>, <b>playing the piano</b>, <b>inventing constructed languages</b>, and sometimes <b>writing</b>, in addition to coding and learning languages, mentioned above.<br>
-					</p>
-          <p>
-						Relating to coding, I have participated in some contests such as <a href="https://codein.withgoogle.com">Google Code-In</a>, and contributed to open-source projects, e.g. <a href="https://github.com/apertium">Apertium</a>. I would like to be able to openly talk and be proud of my cubing career as well, but I have not achieved much, so here you have a <a href="https://www.worldcubeassociation.org/persons/2018LILL04">link to my WCA profile</a>, just in case you want to look at it.
-					</p>
-          <p class="profile-text-social">
-						<a class="blacklink" href="https://github.com/albertonl"><i class="fab fa-github"></i></a>&nbsp;&nbsp;&nbsp;
-						<a class="blacklink" href="https://twitter.com/albertonldev"><i class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
-						<a class="blacklink" href="mailto:alberto@albertonl.com"><i class="fas fa-envelope"></i></a>
-					</p>
-        </div>
-        <div class="achievements done-projects">
-          <h2><u>Finished projects</u>&nbsp;&nbsp;<i class="fas fa-clipboard-check"></i></h2>
-					<p class="achievement-item-left">
-						<span class="achievement-title">Jeffrey&nbsp;
-							<a class="blacklink" href="https://github.com/albertonl/jeff"><i class="fab fa-github"></i></a>&nbsp;
-							<a class="blacklink" href="https://t.me/ImGonnaBeYourWorstNightmareBot"><i class="fab fa-telegram"></i></a>
-						</span><br>
-						<span class="achievement-desc">Jeff is a chatbot that does, well, strange things.</span>
-					</p>
-					<p class="achievement-item-left">
-						<span class="achievement-title">Lletrejador&nbsp;
-							<a class="blacklink" href="https://github.com/albertonl/lletrejador"><i class="fab fa-github"></i></a>
-						</span><br>
-						<span class="achievement-desc">A word speller with pronunciation indicators for Catalan words. Using the <a href="https://github.com/apertium/apertium-cat">apertium-cat</a> language module.</span>
-					</p>
-        </div>
-        <div class="achievements undone-projects">
-					<h2><u><span class="big-only">Unfinished projects</span><span class="small-only">Undone projects</span></u>&nbsp;&nbsp;<i class="fas fa-tasks"></i></h2>
-					<p class="achievement-item-left">
-						<span class="achievement-title">ALB Programming Language&nbsp;
-							<a class="blacklink" href="https://github.com/albpl"><i class="fab fa-github"></i></a>&nbsp;
-							<a class="blacklink" href="https://albpl.blogspot.com"><i class="fas fa-globe"></i></a>
-						</span><br>
-						<span class="achievement-desc">A simple but powerful programming language, suitable for everyone.</span>
-					</p>
-          <p class="achievement-item-left">
-            <span class="achievement-title">ALB AulesScraper&nbsp;
-              <a class="blacklink" href="https://github.com/albertonl/alb-as"><i class="fab fa-github"></i></a>
-            </span><br>
-            <span class="achievement-desc">Web scraper and emailer for <a href="https://aules.edu.gva.es">Aules</a>, which will get course and task updates right into your inbox. This is <b>not</b> a sponsored/partnered project.</span>
-          </p>
-				</div>
-      </div>
-      <div class="profile-text profile-text-header col-lg-6 col-sm-12">
-        <div class="achievements awards">
-          <h2><u>Achievements</u>&nbsp;&nbsp;<i class="fas fa-trophy"></i></h2>
-					<p class="achievement-item">
-						<span class="achievement-title">Google Code-In Grand Prize Winner</span><br>
-						<span class="achievement-desc">December 2018, <a href="https://github.com/apertium">Apertium</a></span>
-					</p>
-          <p class="achievement-item">
-            <span class="achievement-title">"Premi Extraordinari Ed. Primària"</span><br>
-            <span class="achievement-desc">April 2018, Alicante (Spain)</span>
-          </p>
-					<p class="achievement-item">
-						<span class="achievement-title">OIE Participant</span><br>
-						<span class="achievement-desc">April 2019, <a href="https://olimpiada-informatica.org/">OIE</a></span>
-					</p>
-					<p class="achievement-item">
-						<span class="achievement-title">School's Literary Contest Winner</span><br>
-						<span class="achievement-desc">June 2018, June 2019 (<a href="http://iesmariablasco.com/images/concurso_literario.pdf">2019 PDF</a>)
-          </p>
-				</div>
-        <div class="achievements chess">
-          <h2><u>Chess ELO ratings</u>&nbsp;&nbsp;<i class="fas fa-chess-knight"></i></h2>
-          <p class="achievement-item">
-            <span class="achievement-title">FIDE rating: 1217</span><br>
-            <span class="achievement-desc">April 2020, <a href="https://ratings.fide.com/profile/54561035">FIDE</a></span>
-          </p>
-        </div>
-        <div class="achievements pbs">
-					<h2><u>3x3x3 PBs</u>&nbsp;&nbsp;<span class="cubing-icon event-333"></span></h2>
-					<p class="achievement-item">
-						<span class="achievement-title">Single: 13.42s</span>
-					</p>
-					<p class="achievement-item">
-						<span class="achievement-title">Average: 17.18s</span><br>
-						<span class="achievement-desc">(16.00)&nbsp;&nbsp;16.26&nbsp;&nbsp;(19.31)&nbsp;&nbsp;16.33&nbsp;&nbsp;18.97</span>
-					</p>
-				</div>
-        <div class="achievements languages">
-					<h2><u><span class="big-only">Languages I speak</span><span class="small-only">My Languages</span></u>&nbsp;&nbsp;<i class="fas fa-comment"></i></h2>
-					<p class="achievement-item">
-						<span class="achievement-title">Spanish (Español)&nbsp;
-							<img class="flag" src="/static/img/flags-svg/spain.svg">
-						</span><br>
-						<span class="achievement-desc">Native</span>
-					</p>
-					<p class="achievement-item">
-						<span class="achievement-title">Catalan (Català)&nbsp;
-							<img class="flag" src="/static/img/flags-svg/andorra.svg">
-						</span><br>
-						<span class="achievement-desc">Native</span>
-					</p>
-					<p class="achievement-item">
-						<span class="achievement-title">English&nbsp;
-							<img class="flag" src="/static/img/flags-svg/united-states-of-america.svg">
-						</span><br>
-						<span class="achievement-desc">Advanced</span>
-					</p>
-          <p class="achievement-item">
-						<span class="achievement-title">Latvian (Latviešu valoda)&nbsp;
-							<img class="flag" src="/static/img/flags-svg/latvia.svg">
-						</span><br>
-						<span class="achievement-desc">Amateur</span>
-					</p>
-					<p class="achievement-item">
-						<span class="achievement-title">French (Français)&nbsp;
-							<img class="flag" src="/static/img/flags-svg/france.svg">
-						</span><br>
-						<span class="achievement-desc">Beginner</span>
-					</p>
-					<p class="achievement-item">
-						<span class="achievement-title">Russian (Pусский)&nbsp;
-							<img class="flag" src="/static/img/flags-svg/russia.svg">
-						</span><br>
-						<span class="achievement-desc">Beginner</span>
-					</p>
-				</div>
-      </div>
-
-      <div class="col-12">
-        <div class="jumbotron jumbotron-fluid text-profile" id="contact-email">
-          <div class="container">
-            <h1 class="display-5 jumbotron-text jumbotron-email"><a class="jumbotron-link jumbotron-email" href="mailto:alberto@albertonl.com"><u>alberto@albertonl.com</u></a></h1>
-            <p class="lead jumbotron-text">Send me an email!</p>
-            <a class="btn btn-primary btn-lg" href="/contact" role="button">Contact page »</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="profile-text col-lg-6 col-sm-12">
-        <div class="achievements plangs">
-          <h2 class="skill-title"><u>Programming languages</u>&nbsp;&nbsp;<i class="fas fa-cogs"></i></h2>
-          <p class="achievement-item-left">
-            <span class="achievement-title">Python&nbsp;&nbsp;
-              <i class="devicon-python-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">2 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-            </div>
-          </p>
-          <p class="achievement-item-left">
-            <span class="achievement-title">C++&nbsp;&nbsp;
-              <i class="devicon-cplusplus-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">1.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 33%;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">33%</div>
-            </div>
-          </p>
-          <p class="achievement-item-left">
-            <span class="achievement-title">JavaScript (ES6)&nbsp;&nbsp;
-              <i class="devicon-javascript-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">0.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-            </div>
-          </p>
-          <p class="achievement-item-left">
-            <span class="achievement-title">PHP&nbsp;&nbsp;
-              <i class="devicon-php-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">1 year of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-            </div>
-          </p>
-          <p class="achievement-item-left">
-            <span class="achievement-title">Bash&nbsp;&nbsp;
-              <i class="devicon-linux-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">1.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-info" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-            </div>
-          </p>
-        </div>
-        <div class="achievements mlangs">
-          <h2 class="skill-title"><u>Markup languages</u>&nbsp;&nbsp;<i class="fas fa-edit"></i></h2>
-          <p class="achievement-item-left">
-            <span class="achievement-title">HTML&nbsp;&nbsp;
-              <i class="devicon-html5-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">1.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-            </div>
-          </p>
-          <p class="achievement-item-left">
-            <span class="achievement-title">XML&nbsp;&nbsp;
-              <i class="fas fa-code"></i>
-            </span><br>
-            <span class="achievement-desc">1 year of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-            </div>
-          </p>
-        </div>
-      </div>
-      <div class="profile-text col-lg-6 col-sm-12">
-        <div class="achievements frameworks">
-          <h2 class="skill-title"><u>Frameworks & Libraries</u>&nbsp;&nbsp;<i class="fas fa-box"></i></h2>
-          <p class="achievement-item">
-            <span class="achievement-title">Django (Python)&nbsp;&nbsp;
-              <i class="devicon-django-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">0.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">20%</div>
-            </div>
-          </p>
-          <p class="achievement-item">
-            <span class="achievement-title">Vue.js (JavaScript)&nbsp;&nbsp;
-              <i class="devicon-vuejs-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">0.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">15%</div>
-            </div>
-          </p>
-          <p class="achievement-item">
-            <span class="achievement-title">Bootstrap 4 (CSS)&nbsp;&nbsp;
-              <i class="devicon-bootstrap-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">0.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-danger" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-            </div>
-          </p>
-        </div>
-        <div class="achievements misc">
-          <h2 class="skill-title"><u>Other languages/tools</u>&nbsp;&nbsp;<i class="fas fa-tools"></i></h2>
-          <p class="achievement-item">
-            <span class="achievement-title">CSS3&nbsp;&nbsp;
-              <i class="devicon-css3-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">1.5 years of experience</span><br>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-            </div>
-          </p>
-          <p class="achievement-item">
-            <span class="achievement-title">PostgreSQL&nbsp;&nbsp;
-              <i class="devicon-postgresql-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">0.5 years of experience</span>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-            </div>
-          </p>
-          <p class="achievement-item">
-            <span class="achievement-title">MySQL&nbsp;&nbsp;
-              <i class="devicon-mysql-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">1 year of experience</span>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-            </div>
-          </p>
-          <p class="achievement-item">
-            <span class="achievement-title">Git&nbsp;&nbsp;
-              <i class="devicon-git-plain blacklink"></i>
-            </span><br>
-            <span class="achievement-desc">1 year of experience</span>
-            <div class="progress">
-              <div class="progress-bar bg-warning" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-            </div>
-          </p>
-        </div>
+      <div class="col-lg-6 col-sm-12">
+        <img src="oops.gif" alt="Oops GIF">
       </div>
     </div>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer class="page-footer font-small pt-4 body-reg">
-      <div class="container-fluid text-center text-md-left">
-        <div class="row">
-          <div class="col-md-6 mt-md-0 mt-3">
-            <img src="/static/img/logo.png" height="60" alt="Website logo">
-            <hr>
-            <div class="acknowledgements">
-              <ul class="list-unstyled">
-                <li>Flag icons designed by <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> flaticon.es</a></li>
-                <li><a href="#contact-email">Contact section</a> background image: <a href="https://unsplash.com/photos/cvBBO4PzWPg">Unsplash</a></li>
-                <li>All other images have been taken by me ;)</li>
-              </ul>
-            </div>
-          </div>
-
-          <hr class="clearfix w-100 d-md-none pb-3">
-
-          <div class="col-md-3 mb-md-3 mb-3">
-            <h5 class="text-uppercase">Social Media</h5>
-
-            <ul class="list-unstyled">
-              <li>
-                <i class="fab fa-youtube"></i>&nbsp;<a href="https://www.youtube.com/channel/UCryV5MrUXVbCXenANPN-TRQ">YouTube</a>
-              </li>
-              <li>
-                <i class="fab fa-instagram"></i>&nbsp;<a href="https://instagram.com/albertonl_">Instagram</a>
-              </li>
-              <li>
-                <i class="fab fa-twitter"></i>&nbsp;<a href="https://twitter.com/albertonldev">Twitter</a>
-              </li>
-              <li>
-                <i class="fab fa-reddit"></i>&nbsp;<a href="https://reddit.com/u/albertonl">Reddit</a>
-              </li>
-              <li>
-                <i class="fab fa-github"></i>&nbsp;<a href="https://github.com/albertonl">GitHub</a>
-              </li>
-              <li>
-                <i class="fas fa-envelope"></i>&nbsp;<a href="mailto:alberto@albertonl.com">Send me an email!</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3 mb-md-0 mb-3">
-            <h5 class="text-uppercase">Other Links</h5>
-
-            <ul class="list-unstyled">
-              <li><a href="/" onclick="alert('I\'m sorry, but my blog is not ready... just yet.')">My blog!</a></li>
-              <li><a href="https://medium.com/@alberto.navalonlillo">Stalk me on Medium</a></li>
-              <li><a href="https://www.worldcubeassociation.org/persons/2018LILL04">WCA profile</a></li>
-              <li><a href="https://ratings.fide.com/profile/54561035">FIDE profile</a></li>
-              <li><a href="https://codein.withgoogle.com">Google Code-In</a></li>
-              <li><a href="https://apertium.org">Apertium</a></li>
-            </ul>
-          </div>
-          <div class="col-12 footer-copyright" align="center">
-            <i class="far fa-copyright"></i>&nbsp;2020 Copyright:&nbsp;
-            <a href="https://albertonl.com">albertonl.com</a><br>
-            Made with <i class="fas fa-heart"></i>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
